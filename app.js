@@ -20,3 +20,14 @@ function ProductObject(name, location){
   }
 })();
 // console.log(productObjectsArray);
+
+function randomObject(){
+    return Math.floor(Math.random() * productNamesArray.length);
+}
+
+//wanted to be sure 0 & 19 were returned
+(function testRandom(){
+  for(i = 0; i < productNamesArray.length * 5; i++){
+    console.log(randomObject());
+  }
+})();
