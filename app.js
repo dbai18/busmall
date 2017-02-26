@@ -26,8 +26,16 @@ function randomObject(){
 }
 
 //wanted to be sure 0 & 19 were returned
-(function testRandom(){
-  for(i = 0; i < productNamesArray.length * 5; i++){
-    console.log(randomObject());
-  }
-})();
+// (function testRandom(){
+//   for(i = 0; i < productNamesArray.length * 5; i++){
+//     console.log(randomObject());
+//   }
+// })();
+
+function showImages(){
+  var index = randomObject();
+  document.getElementById('left_img').src = productObjectsArray[randomObject()].location;
+  document.getElementById('mid_img').src = productObjectsArray[randomObject()].location;
+  document.getElementById('right_img').src = productObjectsArray[randomObject()].location;
+}
+showImages();
