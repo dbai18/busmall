@@ -31,11 +31,21 @@ function randomObject(){
 //     console.log(randomObject());
 //   }
 // })();
-
+var randomIndex = [];
+function randomIndexGen(){
+  while (randomIndex.length < 3) {
+        var index = randomObject();
+        if (randomIndex.indexOf(index) === -1) {
+          randomIndex.push(index);
+        }
+      }
+      return randomIndex;
+}
+randomIndexGen();
 function showImages(){
-  var index = randomObject();
-  document.getElementById('left_img').src = productObjectsArray[randomObject()].location;
-  document.getElementById('mid_img').src = productObjectsArray[randomObject()].location;
-  document.getElementById('right_img').src = productObjectsArray[randomObject()].location;
+
+  document.getElementById('left_img').src = productObjectsArray[randomIndex[0]].location;
+  document.getElementById('mid_img').src = productObjectsArray[randomIndex[1]].location;
+  document.getElementById('right_img').src = productObjectsArray[randomIndex[2]].location;
 }
 showImages();
